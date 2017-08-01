@@ -1,1 +1,2 @@
-web: python testsite/manage.py runserver 
+web: gunicorn testsite.wsgi --log-file -
+
