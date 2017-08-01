@@ -27,7 +27,7 @@ SECRET_KEY = '0m@f9uxjh#&o=w@6^n&4is_n7$^_1_5ojq#%7(t1_1*71#kbp)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0', 'guarded-wildwood-41385.herokuapp.com']
 
 
 # Application definition
@@ -125,6 +125,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 # Static files (CSS, JavaScript, Images)
