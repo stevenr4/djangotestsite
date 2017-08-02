@@ -2,13 +2,22 @@
 
 {% block content %}
   <h1>Django Test Site</h1>
-  <div class="row">
-    <div class="col-sm-6">
+  <h2>Software Engineering Assignment</h2>
+  <p>This site is the result of the Software Engineering Assignment. The task requires a site to be built and launched using the Django framework on the Python language. This site uses Django version 1.11.4 and Python 2.7.11.</p>
+  <h3>Requirements</h3>
+  <p>There needs to be at least 3 pages: Registration Form. Confirmation. Registered User Report.</p>
+  <p>A user needs to be able to register an address along with their first name and last name. There needs to be validation on both the client side and the server side.</p>
+  <p>The admin report needs to show all of the entries ordered by the date and time the entry was submitted.</p>
+  <p><br>On top of the above requirements, the following three rules must be met</p>
+  <ol>
+    <li>Two URLs need to be provided. One to the user registration and one to the admin panel. <span class="light">There are links to the URLs below</span></li>
+    <li>This site needs to be hosted on the web. A source code submission will not be accepted. <span class="light">This specific site is hosted using Heroku. I am also capable of hosting sites through AWS or through physical hardware on a static IP.</span></li>
+    <li>Create a Github account and have the code hosted there. <span class="light">This code has been uploaded to my existing github account. I hope it is acceptable that I don't create a new github account for this task specifically. The code can be found <a href="">here</a>.</span></li>
+  </ol>
+  <h2>Links</h2>
 
-    </div>
-    <div class="col-sm-6">
-    </div>
-  </div>
+  <a class="btn btn-primary" href="{% url 'register_user' %}" role="button">User Registration</a>
+  <a class="btn btn-primary" href="{% url 'admin:index' %}" role="button">Admin Panel</a>
 {% endblock %}
 
 

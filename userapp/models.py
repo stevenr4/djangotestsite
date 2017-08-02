@@ -71,3 +71,7 @@ class UserAddress(models.Model):
     state = models.CharField(max_length=2, choices=STATE_CHOICES)
     country = models.CharField(max_length=3)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    # Changing the plural name so it doesn't look weird in the admin panel
+    class Meta:
+        verbose_name_plural = "user addresses"
