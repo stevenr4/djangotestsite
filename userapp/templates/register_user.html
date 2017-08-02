@@ -1,7 +1,12 @@
+{% extends 'base.html' %}
+
+{# Load the tag library #}
+{% load bootstrap3 %}
 
 {# Display a form #}
 {% block content %}
-  <form action="/url/to/submit/" method="post" class="form">
+  <h1>Registration Form</h1>
+  <form action="{% url 'register_user' %}" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

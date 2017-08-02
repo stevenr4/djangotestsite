@@ -1,0 +1,6 @@
+table {border-top: 1px solid lightgray; margin: 10px 0; }
+
+td { padding: 10px 15px; }
+tr { border-bottom: 1px solid lightgray; }
+tr:nth-child(even) {background-color: #f5f5f5}
+tr:hover { background: lightgray; }

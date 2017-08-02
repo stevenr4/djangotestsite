@@ -8,7 +8,7 @@ from django.db import models
 class UserAddress(models.Model):
 
     # A definitive list of state choices to compare against
-    STATE_CHOICES =  (
+    STATE_CHOICES = (
         ("AL", "Alabama"),
         ("AK", "Alaska"),
         ("AZ", "Arizona"),
@@ -71,4 +71,3 @@ class UserAddress(models.Model):
     state = models.CharField(max_length=2, choices=STATE_CHOICES)
     country = models.CharField(max_length=3)
     created_at = models.DateTimeField(auto_now_add=True)
-

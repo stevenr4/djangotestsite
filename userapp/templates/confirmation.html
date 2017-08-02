@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Django Test Site</h1>
+  <p><br/>Thank you for registering<br/></p>
+  <table>
+    <tr><td>first_name</td><td>{{useraddress.first_name}}</td>
+    <tr><td>last_name </td><td>{{useraddress.last_name }}</td>
+    <tr><td>address_1 </td><td>{{useraddress.address_1 }}</td>
+    <tr><td>address_2 </td><td>{{useraddress.address_2 }}</td>
+    <tr><td>city</td><td>{{useraddress.city}}</td>
+    <tr><td>state</td><td>{{useraddress.state}}</td>
+    <tr><td>country</td><td>{{useraddress.country}}</td>
+    <tr><td>created_at</td><td>{{useraddress.created_at}}</td>
+  </table>
+
+  <a class="btn btn-primary" href="{% url 'register_user' %}" role="button">Register Another Address</a>
+  <a class="btn btn-primary" href="{% url 'index' %}" role="button">Return to Index</a>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
