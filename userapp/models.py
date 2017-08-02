@@ -63,11 +63,12 @@ class UserAddress(models.Model):
     )
 
     # Address data for the user
-    firstname = models.CharField(max_length=127)
-    lastname = models.CharField(max_length=127)
-    address1 = models.CharField(max_length=127)
-    address2 = models.CharField(max_length=127, blank=True, null=True)
+    first_name = models.CharField(max_length=127)
+    last_name = models.CharField(max_length=127)
+    address_1 = models.CharField(max_length=127)
+    address_2 = models.CharField(max_length=127, blank=True, null=True)
     city = models.CharField(max_length=127)
     state = models.CharField(max_length=2, choices=STATE_CHOICES)
     country = models.CharField(max_length=3)
+    created_at = models.DateTimeField(auto_now_add=True)
 
