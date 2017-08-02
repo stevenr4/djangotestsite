@@ -10,7 +10,7 @@ class RegistrationForm(forms.ModelForm):
     first_name = forms.CharField(max_length=127, label="Your First Name")
     last_name = forms.CharField(max_length=127, label="Your Last Name")
     address_1 = forms.CharField(max_length=127, label="Address Line 1")
-    address_2 = forms.CharField(max_length=127, label="Address Line 2")
+    address_2 = forms.CharField(max_length=127, label="Address Line 2", required=False)
     city = forms.CharField(max_length=127, label="City")
     state = forms.ChoiceField(label="State", choices=UserAddress.STATE_CHOICES)
     country = forms.CharField(max_length=2, label="Country",
@@ -27,3 +27,7 @@ class RegistrationForm(forms.ModelForm):
             'state',
             'country'
         )
+
+    def __init__(self, *args, **kwargs):
+        super(RegistrationForm, self).__init__(*args, **kwargs)
+        self.fields['address_2'].required = False
