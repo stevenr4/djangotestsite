@@ -30,7 +30,7 @@ class UserAddressAdmin(admin.ModelAdmin):
 
 
     def get_name(self, obj):
-        return obj.author.name
+        return obj.first_name + ' ' + obj.last_name
     get_name.admin_order_field = 'address'  # Allows column order sorting
     get_name.short_description = 'Registered Address'  # Renames column head
 

@@ -27,7 +27,7 @@ SECRET_KEY = '0m@f9uxjh#&o=w@6^n&4is_n7$^_1_5ojq#%7(t1_1*71#kbp)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'hidden-oasis-96541.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'hidden-oasis-96541.herokuapp.com', 'www.stevenr4.com']
 
 
 # Application definition
